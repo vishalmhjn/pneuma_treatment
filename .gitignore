@@ -1,2 +1,5 @@
 data/derived/*
 plots/*
+
+!data/derived/.gitkeep 
+!plots/.gitkeep 
