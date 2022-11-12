@@ -17,3 +17,6 @@ You should be in [src](src/) folder when running the codes.
 
 ### Outputs
 3. With the default paths, the plots are saved in [plots](plots/) and data is saved in [data/derived](data/derived).
+
+### Processed data
+3. A link to the processed speed and  from the 1000-1030 hour recording is provided at an [external link](https://syncandshare.lrz.de/getlink/fiMB116QjrdPsvjZhVjWPC/). This file contains only four columns: ```vehicle id```, ```frame number```, ```processed speed``` and ```processed acceleration```. Using vehicle id and frame columns, this data can be merged with the original data.
