@@ -6,7 +6,7 @@ Trajectory data collected from Drones over an urban area in Athens. For more inf
 <img src="media/pneuma_overview.gif" alt="drawing" width="400" align="center"/>
 </p>
 
-This repository provides an automated way to treat the noise and anomalies (in the form of unrealistic peaks) in the acceleration values of a number of vehicles in the pneuma dataset. The algorithm uses a combination of low-pass filters (Savitzky-Golay filter, Gaussian filter) to remove the noise. A machine learning model (XGBoost) is used to reconstruct acceleration the time-series and detect the anomalies. If anomalies are detected, they are removed. The outputs are the processed time-series profiles of vehicle speeds and accelerations without high frequency noise and unrealistic acceleration peaks.
+This repository provides an automated way to treat the noise and anomalies (in the form of unrealistic peaks) in the acceleration values of a number of vehicles in the pneuma dataset. The algorithm uses a combination of low-pass filters (Savitzky-Golay filter, Gaussian filter) to remove the noise. A machine learning model (XGBoost) is used to reconstruct acceleration time-series and detect anomalies. If anomalies are detected, they are removed. The outputs are the processed time-series profiles of vehicle speeds and accelerations without high frequency noise and unrealistic acceleration peaks.
 
 # Code 
 You should be in [src](src/) folder when running the codes.
