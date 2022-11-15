@@ -1,0 +1,18 @@
+cff-version: 0.1.0
+message: "If you use these outputs, please cite it as below."
+authors:
+  - family-names: Mahajan
+    given-names: Vishal
+  - family-names: Barmpounakis
+    given-names: Emmanouil
+  - family-names: Alam
+    given-names: Md Rakibul
+  - family-names: Geroliminis
+    given-names: Nikolas
+  - family-names: Antoniou
+    given-names: Constantinos
+
+title: "Treating Noise and Anomalies\\ in Vehicle Trajectories from an Experiment with a Swarm of Drones"
+version: 0.1.0
+url: https://github.com/vishalmhjn/pneuma_treatment.git
+date-released: 2021-06-09
