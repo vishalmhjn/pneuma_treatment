@@ -166,7 +166,14 @@ class PNEUMATrajectory:
 
 			ax[1,1].plot(self.df.frame, self.df.dv, label='Original', alpha=0.6)
 			ax[1,1].plot(self.df.frame, self.df.gdv, label='GF with anomalies', color='r')
-			ax[1,1].plot(self.df.frame, self.df.g_na, label='GF without anomalies', color='k')   
+			ax[1,1].plot(self.df.frame, self.df.g_na, label='GF without anomalies', color='k')
+
+			xmin,xmax = np.min(self.df[np.abs(self.df.xgb-self.df.dsv)>tol].frame-50),\
+			np.max(self.df[np.abs(self.df.xgb-self.df.dsv)>tol].frame+50)
+			ax[0,0].set_xlim([xmin, xmax])
+			ax[0,1].set_xlim([xmin, xmax])
+			ax[1,0].set_xlim([xmin, xmax])
+			ax[1,1].set_xlim([xmin, xmax])   
 
 		else:
 			ax[1,0].plot(self.df.frame, self.df.v, label='Original', alpha=0.6)
@@ -185,6 +192,16 @@ class PNEUMATrajectory:
 		ax[0,0].grid(True)
 		ax[0,0].set_xticklabels([])
 		ax[0,1].set_xticklabels([])
+
+		ax[0,0].yaxis.set_tick_params(labelsize=15)
+		ax[0,1].yaxis.set_tick_params(labelsize=15)
+		ax[1,0].yaxis.set_tick_params(labelsize=15)
+		ax[1,1].yaxis.set_tick_params(labelsize=15)
+
+		ax[0,0].xaxis.set_tick_params(labelsize=15)
+		ax[0,1].xaxis.set_tick_params(labelsize=15)
+		ax[1,0].xaxis.set_tick_params(labelsize=15)
+		ax[1,1].xaxis.set_tick_params(labelsize=15)
 
 		ax[0,0].legend(loc="upper right", bbox_to_anchor=(1,1.05),handletextpad=0.1,prop={'size': 14},labelspacing = .2)
 		ax[0,1].legend(loc="upper left", bbox_to_anchor=(0,1.05),handletextpad=0.1,prop={'size': 14},labelspacing = .2)
@@ -270,8 +287,9 @@ if __name__ == "__main__":
 			# Calculate speeds consistent with the new accelerations
 			t_acc = np.array(vehicle.getter('filtered_acc')) 
 			t_speed = list(np.array(vehicle.getter('sv'))/3.6)
-			ns = t_speed[0] + 2 * 0.04* np.c_[np.r_[0, t_acc[1:-1:2].cumsum()], 
-											t_acc[::2].cumsum() - t_acc[0] / 2].ravel()[:len(t_acc)]
+			# ns = t_speed[0] + 2 * 0.04* np.c_[np.r_[0, t_acc[1:-1:2].cumsum()], 
+			# 								t_acc[::2].cumsum() - t_acc[0] / 2].ravel()[:len(t_acc)]
+			ns = t_speed[0] +  0.04 * (t_acc + np.r_[0, t_acc[:-1]]).cumsum()/2
 			vehicle.setter('filtered_speed', ns*3.6)
 
 			# assign anomalies based on the reconstructed error	
