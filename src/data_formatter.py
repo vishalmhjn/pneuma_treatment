@@ -28,31 +28,31 @@ def list_to_df(temp):
     return df_meta, df_trajectory
 
 def write_list(file):
-	with open(file) as f, TemporaryFile("w+") as t:
-		next(f)
-		list_meta = []
-		list_trajectory = []
-		for line in tqdm(f):
-			h, ln = line, len(line.split("; "))
-			temp = h.strip().split("; ")
-			m, t = list_to_df(temp)
-			list_meta.append(m)
-			list_trajectory.append(t)
-	return list_meta, list_trajectory
+    with open(file) as f, TemporaryFile("w+") as t:
+        next(f)
+        list_meta = []
+        list_trajectory = []
+        for line in tqdm(f):
+            h, ln = line, len(line.split("; "))
+            temp = h.strip().split("; ")
+            m, t = list_to_df(temp)
+            list_meta.append(m)
+            list_trajectory.append(t)
+    return list_meta, list_trajectory
 
 if __name__ == '__main__':
 
-	
-	paths = glob.glob(PATH+"/*.csv")
-	print(paths)
-	for file in paths:
-		print(file)
-		filename = file.split("_")[-2]
-		# filenames will be the data collection hours e.g. 0900-0930
-		print(filename)
-		list_meta, list_trajectory = write_list(file)
-		# save meta file
-		pd.concat(list_meta).to_csv("../data/long/meta_"+filename+".csv", index=None)
-		
-		# save trajectory data
-		pd.concat(list_trajectory).to_csv("../data/long/"+filename+".csv", index=None)
+    
+    paths = glob.glob(PATH+"/*.csv")
+    print(paths)
+    for file in paths:
+        print(file)
+        filename = file.split("_")[-2]
+        # filenames will be the data collection hours e.g. 0900-0930
+        print(filename)
+        list_meta, list_trajectory = write_list(file)
+        # save meta file
+        pd.concat(list_meta).to_csv("../data/long/meta_"+filename+".csv", index=None)
+        
+        # save trajectory data
+        pd.concat(list_trajectory).to_csv("../data/long/"+filename+".csv", index=None)
