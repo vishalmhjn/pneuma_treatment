@@ -1,5 +1,7 @@
 # pneuma_open_traffic
 
+Copyright 2020-2023 Vishal Mahajan
+
 Trajectory data collected from Drones over an urban area in Athens. For more info: https://open-traffic.epfl.ch/
 
 <p align="center">
