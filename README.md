@@ -1,4 +1,4 @@
-# pneuma_open_traffic
+# pneuma_treatment
 
 Copyright 2020-2023 Vishal Mahajan
 
@@ -24,6 +24,6 @@ With the default paths, the plots are saved in [plots](plots/) and data is saved
 A link to the processed speed and  from the 1000-1030 hour recording is provided at an [external link](https://syncandshare.lrz.de/getlink/fiMB116QjrdPsvjZhVjWPC/). This file contains only four columns: ```vehicle id```, ```frame number```, ```processed speed``` and ```processed acceleration```. Using vehicle id and frame columns, this data can be merged with the original data.
 
 ## Citation
-If you use these codes in your work, kindly cite the following preprint:
+If you use these codes in your work, kindly cite the following:
 
-Mahajan, V., Barmpounakis, E., Alam, M. R., Geroliminis, N., & Antoniou, C. (2021). Treating Noise and Anomalies in Vehicle Trajectories from an Experiment with a Swarm of Drones. [Preprint Link](https://mediatum.ub.tum.de/doc/1694634/document.pdf)
+Mahajan, V., Barmpounakis, E., Alam, M. R., Geroliminis, N., & Antoniou, C. (2023). Treating Noise and Anomalies in Vehicle Trajectories from an Experiment with a Swarm of Drones. [Article Link](https://mediatum.ub.tum.de/doc/1694634/document.pdf)
