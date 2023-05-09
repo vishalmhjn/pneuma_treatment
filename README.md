@@ -26,4 +26,4 @@ A link to the processed speed and  from the 1000-1030 hour recording is provided
 ## Citation
 If you use these codes in your work, kindly cite the following:
 
-Mahajan, V., Barmpounakis, E., Alam, M. R., Geroliminis, N., & Antoniou, C. (2023). Treating Noise and Anomalies in Vehicle Trajectories from an Experiment with a Swarm of Drones. [Article Link](https://mediatum.ub.tum.de/doc/1694634/document.pdf)
+Mahajan, V., Barmpounakis, E., Alam, M. R., Geroliminis, N., & Antoniou, C. (2023). Treating Noise and Anomalies in Vehicle Trajectories from an Experiment with a Swarm of Drones. [Link](https://doi.org/10.1109/TITS.2023.3268712) to the published article. [Link](https://mediatum.ub.tum.de/node?id=1694634) to the accepted version for personal use.
