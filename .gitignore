@@ -1,5 +1,6 @@
 data/derived/*
 plots/*
-
+.pneuma_env/
 !data/derived/.gitkeep 
 !plots/.gitkeep 
+.DS_Store
