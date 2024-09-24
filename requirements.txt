@@ -42,7 +42,7 @@ snuggs==1.4.7
 threadpoolctl==3.2.0
 tqdm==4.66.3
 tzdata==2023.3
-urllib3==2.1.0
+urllib3==2.2.2
 utm==0.7.0
 xgboost==2.0.2
 xyzservices==2023.10.1
